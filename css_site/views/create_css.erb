@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<div class="container-fluid">
+<br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
+
+<div style="width:50%; height:100%; border:1px dashed black; background:#ECECEC; color:#000; padding-top: 10px;" class="col-md-2 col-md-offset-3">
+<div style="color:#95A5A6;">//Copy and paste the related text below to the stylesheet on <a href="https://zanadoo.me/admin/dashboard" target="blank">Zanadoo</a> account//</div>
+<div style="padding-top:30px;">
+<small class="text-muted">/*
+* — Body and Text Colour —
+*/</small>
+<br>
+body {
+
+background-colour: <%= @bodycolour %>;
+
+<br>
+
+color: <%= @bodytext %>;
+<br>
+
+}
+
+<br>
+<br>
+<small class="text-muted">/*
+* — Book now button colour —
+*/</small>
+<br>
+.btn-success { <br> 
+    color: #fff;
+    background-color: <%= @buttoncolour %>; <br>
+
+    border-color: <%= @buttoncolour %>; 
+}
+<br>
+<br>
+<small class="text-muted">/*
+* — Button hover colour —
+*/</small>
+<br>
+.btn-success:hover,<br>
+.btn-success:focus,<br>
+.btn-success:active,<br>
+.btn-success.active,<br>
+.btn-primary:hover,<br>
+.btn-primary:focus,<br>
+.btn-primary:active,<br>
+.btn-primary.active,<br>
+.btn-danger:hover,<br>
+.btn-danger:focus,<br>
+.btn-danger:active,<br>
+.btn-danger.active,<br>
+.btn-info:hover,<br>
+.btn-info:focus,<br>
+.btn-info:active,<br>
+.btn-info.active,<br>
+.btn-default:hover,<br>
+.btn-default:focus,<br>
+.btn-default:active,<br>
+.btn-default.active { <br>
+    background-image: linear-gradient(to bottom, <%= @buttonhovcol %>;  0%, <%= @buttonhovcol %>;) <br>
+    background-repeat: repeat-x;
+    border-color: <%= @buttonhovcol %>;
+    color: #fff
+}
+<br>
+<br>
+<small class="text-muted">/*
+* — Colour of links on widget —
+*/</small>
+<br>
+a {
+    color: <%= @linkcolour %>; <br>
+    text-decoration: none;
+}
+
+<br>
+<br>
+<small class="text-muted">/*
+* — Background colour of service category —
+*/</small>
+<br> 
+
+.list-group-item {
+    
+  background-color: <%= @servicecat %>;  
+}
+
+
+</div>
+</div>
+<br>
+
+<a href="/" class="col-md-2 col-md-offset-3" style="padding-top:20px;"> Back </a>

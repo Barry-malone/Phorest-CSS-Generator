@@ -1,0 +1,119 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<div class="container-fluid">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+ <script src="jquery.minicolors.js"></script>
+    <link rel="stylesheet" href="jquery.minicolors.css">
+<script>
+        $(document).ready( function() {
+
+            $('.demo').each( function() {
+                //
+                // Dear reader, it's actually very easy to initialize MiniColors. For example:
+                //
+                //  $(selector).minicolors();
+                //
+                // The way I've done it below is just for the demo, so don't get confused
+                // by it. Also, data- attributes aren't supported at this time...they're
+                // only used for this demo.
+                //
+                $(this).minicolors({
+                    control: $(this).attr('data-control') || 'hue',
+                    defaultValue: $(this).attr('data-defaultValue') || '',
+                    format: $(this).attr('data-format') || 'hex',
+                    keywords: $(this).attr('data-keywords') || '',
+                    inline: $(this).attr('data-inline') === 'true',
+                    letterCase: $(this).attr('data-letterCase') || 'lowercase',
+                    opacity: $(this).attr('data-opacity'),
+                    position: $(this).attr('data-position') || 'bottom left',
+                    swatches: $(this).attr('data-swatches') ? $(this).attr('data-swatches').split(',') : [],
+                    change: function(value, opacity) {
+                        if( !value ) return;
+                        if( opacity ) value += ', ' + opacity;
+                        if( typeof console === 'object' ) {
+                            console.log(value);
+                        }
+                    },
+                    theme: 'bootstrap'
+                });
+
+            });
+
+        });
+    </script>
+    <div class="jumbotron">
+    <h2 align="center">Generate online booking css</h2> 
+    <p align="center">Select your colours and click submit!</p> 
+  </div>
+ 
+
+<br>
+<form class="form-horizontal" action="/create_css" method="get">
+<fieldset>
+
+<br>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Background Colour</label>  
+  <div class="col-md-4">
+  <input id="hue-demo" type="text" placeholder="" class="form-control input-md demo" name="bodycolour" data-control="hue" value="#fff">
+  </div>
+</div>
+
+<!-- Text input-->
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Text colour </label>  
+  <div class="col-md-4">
+  <input id="hue-demo" type="text" placeholder="" class="form-control input-md demo" name="bodytext" data-control="hue" value="#000">
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Button Colour</label>  
+  <div class="col-md-4">
+  <input id="hue-demo" name="buttoncolour" type="text" placeholder="" class="form-control input-md demo" data-control="hue" value="#5cb85c">
+  </div>
+
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Button Hover Colour</label>  
+  <div class="col-md-4">
+  <input id="hue-demo" type="text" placeholder="" class="form-control input-md demo" name="buttonhovcol" data-control="hue" value="#337ab7">
+  </div>
+
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Colour of links</label>  
+  <div class="col-md-4">
+  <input id="hue-demo" type="text" placeholder="" class="form-control input-md demo" name="linkcolour" data-control="hue" value="#337ab7">
+  </div>
+
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Service Category colour</label>  
+  <div class="col-md-4">
+  <input id="hue-demo" type="text" placeholder="" class="form-control input-md demo" name="servicecat" data-control="hue" value="#fff">
+  <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+</fieldset>
+
+</form>
+
+
+<br>
+
+
